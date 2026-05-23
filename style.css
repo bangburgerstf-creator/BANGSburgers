@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f4f4;
+}
+
+:root {
+  --blue: #0037a6;
+  --gold: #ffbf00;
+  --white: #ffffff;
+}
+
+.navbar {
+  background: var(--blue);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.logo span {
+  display: block;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.logo strong {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a,
+.order-btn,
+.hero-buttons a,
+.contact-form button {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+.order-btn:hover,
+.hero-buttons a:hover,
+.contact-form button:hover {
+  background: var(--gold);
+  color: var(--blue);
+}
+
+.hero {
+  background: var(--blue);
+  color: white;
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  border: 3px solid var(--gold);
+}
+
+.hero h1 {
+  font-size: 72px;
+  line-height: 0.9;
+  margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.open-badge {
+  border: 2px solid var(--gold);
+  display: inline-block;
+  padding: 12px 20px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-bar {
+  background: var(--blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+.menu-section,
+.contact-section {
+  padding: 80px 40px;
+}
+
+.section-header p {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.section-header h2,
+.contact-section h2 {
+  color: var(--gold);
+  font-size: 60px;
+  margin: 15px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border: 2px solid var(--gold);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.price-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 2px solid var(--blue);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.contact-form button {
+  background: var(--blue);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+}
