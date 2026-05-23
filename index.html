@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BANGburgers</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+    }
+
+    header{
+      height:100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:5rem;
+      color:#ffb703;
+      text-shadow:3px 3px 10px black;
+    }
+
+    header p{
+      font-size:1.5rem;
+      margin-top:15px;
+      max-width:600px;
+    }
+
+    .button-group{
+      display:flex;
+      gap:20px;
+      margin-top:30px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:15px 35px;
+      background:#ff4d00;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:bold;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      background:#ff7700;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .menu-title{
+      text-align:center;
+      font-size:3rem;
+      margin-bottom:50px;
+      color:#ffb703;
+    }
+
+    .menu{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1d1d1d;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#ffb703;
+    }
+
+    .price{
+      margin-top:15px;
+      font-size:1.2rem;
+      color:#ff7700;
+      font-weight:bold;
+    }
+
+    form{
+      max-width:600px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    input,
+    textarea{
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      font-size:1rem;
+    }
+
+    textarea{
+      resize:none;
+    }
+
+    button{
+      border:none;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#000;
+      text-align:center;
+      padding:30px;
+      color:#aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>BANGburgers</h1>
+
+    <p>
+      Explosive flavor. Massive burgers. Zero regrets.
+    </p>
+
+    <div class="button-group">
+      <a href="#menu" class="btn">View Menu</a>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </header>
+
+  <section id="menu">
+    <h2 class="menu-title">Popular Burgers</h2>
+
+    <div class="menu">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>The Mega BANG</h3>
+
+          <p>
+            Double beef, crispy bacon, melted cheddar, and BANG sauce.
+          </p>
+
+          <div class="price">$12.99</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Firecracker Burger</h3>
+
+          <p>
+            Jalapeños, pepper jack cheese, spicy mayo, and grilled onions.
+          </p>
+
+          <div class="price">$11.49</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>BBQ Boomstack</h3>
+
+          <p>
+            Smoky BBQ sauce, onion rings, bacon, and cheddar cheese.
+          </p>
+
+          <div class="price">$13.49</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" style="background:#181818;">
+
+    <h2 class="menu-title">Contact Us</h2>
+
+    <form action="https://formsubmit.co/bangburgerstf@gmail.com" method="POST">
+
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Your Name"
+        required
+      >
+
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your Email"
+        required
+      >
+
+      <textarea 
+        name="message" 
+        placeholder="Your Message"
+        rows="6"
+        required
+      ></textarea>
+
+      <button type="submit" class="btn">
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
+
+  <footer>
+    © 2026 BANGburgers • Built for flavor 💥
+  </footer>
+
+</body>
+</html>
