@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bang Burgers</title>
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,11 +27,8 @@
 
   <nav>
     <a href="#menu">Menu</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <a href="#menu" class="order-btn">Order Now</a>
 
 </header>
 
@@ -51,12 +48,11 @@
 
     <p>
       Handcrafted smash burgers loaded with flavor explosions.
-      No fuss, no fillers — just pure, juicy, glorious beef.
+      No fuss, no fillers — just pure juicy beef.
     </p>
 
     <div class="hero-buttons">
       <a href="#menu">See Our Menu 🍔</a>
-      <a href="#about">Why Bang Burgers?</a>
     </div>
 
   </div>
@@ -74,7 +70,6 @@
   <div class="section-header">
     <p>WHAT WE SERVE</p>
     <h2>THE MENU</h2>
-    <span>Every burger is a flavor bomb. Pick your weapon.</span>
   </div>
 
   <div class="menu-grid">
@@ -83,10 +78,9 @@
       <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop">
       <div class="card-content">
         <h3>The Classic Bang</h3>
-        <p>Double smash patty, American cheese, pickles, special Bang sauce</p>
+        <p>Double smash patty with Bang sauce</p>
         <div class="price-row">
           <span>$9.99</span>
-          <button>Add to order</button>
         </div>
       </div>
     </div>
@@ -95,10 +89,9 @@
       <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop">
       <div class="card-content">
         <h3>Spicy Inferno</h3>
-        <p>Ghost pepper mayo, jalapeños, crispy onions</p>
+        <p>Ghost pepper mayo and jalapeños</p>
         <div class="price-row">
           <span>$11.99</span>
-          <button>Add to order</button>
         </div>
       </div>
     </div>
@@ -109,15 +102,9 @@
 
 <section id="contact" class="contact-section">
 
-  <h2>FIND US</h2>
+  <h2>CONTACT US</h2>
 
-  <form
-    action="https://formsubmit.co/bangburgerstf@gmail.com"
-    method="POST"
-    class="contact-form"
-  >
-
-    <input type="hidden" name="_captcha" value="false">
+  <form id="contact-form" class="contact-form">
 
     <label>NAME</label>
     <input type="text" name="name" required>
@@ -129,6 +116,8 @@
     <textarea name="message" required></textarea>
 
     <button type="submit">Send Message</button>
+
+    <p id="success-message"></p>
 
   </form>
 
