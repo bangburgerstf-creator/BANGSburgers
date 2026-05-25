@@ -69,22 +69,26 @@ document
     observer.observe(el);
 
   });
-const reviewSlides = document.querySelectorAll(".review-slide");
+window.addEventListener("load", () => {
 
-let currentReview = 0;
+  const reviewSlides = document.querySelectorAll(".review-slide");
 
-setInterval(() => {
+  let currentReview = 0;
 
-  reviewSlides[currentReview].classList.remove("active");
+  setInterval(() => {
 
-  currentReview++;
+    reviewSlides[currentReview].classList.remove("active");
 
-  if (currentReview >= reviewSlides.length) {
+    currentReview++;
 
-    currentReview = 0;
+    if (currentReview >= reviewSlides.length) {
 
-  }
+      currentReview = 0;
 
-  reviewSlides[currentReview].classList.add("active");
+    }
 
-}, 4000);
+    reviewSlides[currentReview].classList.add("active");
+
+  }, 5000);
+
+});
