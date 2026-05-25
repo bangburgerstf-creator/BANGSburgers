@@ -422,21 +422,43 @@ nav a:hover,
 
   padding: 30px;
 
-  opacity: 0;
-
-  transform: translateY(40px);
-
   transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
 }
 
-.review-card.show {
+.review-card:hover,
+.timeline-card:hover {
 
-  opacity: 1;
+  transform: translateY(-8px);
 
-  transform: translateY(0);
+}
+
+.mission-section,
+.values-section,
+.timeline-section,
+.reviews-section {
+
+  animation: fadeSlideUp 1s ease;
+
+}
+
+@keyframes fadeSlideUp {
+
+  from {
+
+    opacity: 0;
+    transform: translateY(30px);
+
+  }
+
+  to {
+
+    opacity: 1;
+    transform: translateY(0);
+
+  }
 
 }
 
