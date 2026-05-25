@@ -2,9 +2,7 @@ const form =
   document.getElementById("contact-form");
 
 const successMessage =
-  document.getElementById("success-message") || {
-    innerText: ""
-  };
+  document.getElementById("success-message");
 
 if(form) {
 
@@ -14,19 +12,32 @@ if(form) {
 
     const formData = new FormData(form);
 
-    formData.append("_captcha", "false");
+    const object =
+      Object.fromEntries(formData);
+
+    const json =
+      JSON.stringify(object);
 
     try {
 
       const response = await fetch(
-        "https://formsubmit.co/ajax/bangburgerstf@gmail.com",
+        "https://api.web3forms.com/submit",
         {
           method: "POST",
-          body: formData
+
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+
+          body: json
         }
       );
 
-      if(response.status === 200) {
+      const result =
+        await response.json();
+
+      if(result.success) {
 
         successMessage.innerText =
           "🍔 Message sent successfully!";
