@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: #f4f4f4;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 :root {
@@ -21,10 +21,13 @@ html {
 .navbar {
   background: var(--blue);
   border-bottom: 3px solid var(--gold);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 20px 40px;
+
   flex-wrap: wrap;
 }
 
@@ -32,6 +35,7 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
+
   color: white;
 }
 
@@ -49,33 +53,45 @@ nav {
   display: flex;
   gap: 15px;
 }
-}
 
 nav a,
 .hero-buttons a,
 .contact-form button {
+
   border: 2px solid var(--gold);
+
   color: var(--gold);
+
   text-decoration: none;
+
   padding: 10px 20px;
+
   font-weight: bold;
+
   transition: 0.3s;
 }
 
 nav a:hover,
 .hero-buttons a:hover,
 .contact-form button:hover {
+
   background: var(--gold);
+
   color: var(--blue);
 }
 
 .hero {
   background: var(--blue);
+
   color: white;
+
   padding: 60px 40px;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 40px;
+
   align-items: center;
 }
 
@@ -87,7 +103,9 @@ nav a:hover,
 .hero h1 {
   font-size: 70px;
   line-height: 0.9;
+
   margin: 20px 0;
+
   font-family: 'Playfair Display', serif;
 }
 
@@ -98,7 +116,9 @@ nav a:hover,
 
 .open-badge {
   border: 2px solid var(--gold);
+
   display: inline-block;
+
   padding: 12px 20px;
 }
 
@@ -108,16 +128,22 @@ nav a:hover,
 
 .info-bar {
   background: var(--blue);
+
   color: white;
+
   display: flex;
   justify-content: center;
+
   gap: 40px;
+
   padding: 25px;
+
   flex-wrap: wrap;
 }
 
 .menu-section,
 .contact-section {
+
   padding: 80px 40px;
 }
 
@@ -128,16 +154,23 @@ nav a:hover,
 
 .section-header h2,
 .contact-section h2 {
+
   color: var(--gold);
+
   font-size: 60px;
+
   margin: 15px 0;
+
   font-family: 'Playfair Display', serif;
 }
 
 .menu-grid {
   margin-top: 50px;
+
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 30px;
 }
 
@@ -149,6 +182,7 @@ nav a:hover,
 .card img {
   width: 100%;
   height: 240px;
+
   object-fit: cover;
 }
 
@@ -167,33 +201,45 @@ nav a:hover,
 
 .price-row span {
   color: var(--gold);
+
   font-weight: bold;
+
   font-size: 24px;
 }
 
 .about-section {
   background: var(--blue);
+
   color: white;
+
   padding: 100px 40px;
 }
 
 .about-container {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 50px;
+
   align-items: center;
 }
 
 .about-small {
   color: var(--gold);
+
   font-weight: bold;
+
   margin-bottom: 15px;
 }
 
 .about-text h2 {
   font-size: 70px;
+
   line-height: 0.9;
+
   margin-bottom: 25px;
+
   font-family: 'Playfair Display', serif;
 }
 
@@ -204,16 +250,21 @@ nav a:hover,
 
 .about-features {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 25px;
 }
 
 .feature-card {
   border: 2px solid var(--gold);
+
   padding: 25px;
+
   background: rgba(255,255,255,0.05);
 
   opacity: 0;
+
   transform: translateY(50px);
 
   transition:
@@ -233,6 +284,7 @@ nav a:hover,
 
 .fade-up {
   opacity: 0;
+
   transform: translateY(60px);
 
   transition:
@@ -247,14 +299,19 @@ nav a:hover,
 
 .contact-form {
   margin-top: 40px;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
+
   padding: 15px;
+
   border: 2px solid var(--blue);
 }
 
@@ -272,24 +329,8 @@ nav a:hover,
   font-weight: bold;
 }
 
-@media (max-width: 900px) {
+/* STORY PAGE */
 
-  .hero,
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1,
-  .about-text h2 {
-    font-size: 50px;
-  }
-
-}
-  .about-features {
-    grid-template-columns: 1fr;
-  }
-
-}
 .story-hero {
 
   background:
@@ -304,7 +345,6 @@ nav a:hover,
   padding: 180px 40px;
 
   text-align: center;
-
 }
 
 .story-hero h1 {
@@ -318,29 +358,20 @@ nav a:hover,
   margin-bottom: 25px;
 
   font-family: 'Playfair Display', serif;
-
 }
 
 .story-hero p {
-
   font-size: 22px;
-
-  letter-spacing: 1px;
-
 }
 
 .mission-section,
 .timeline-section {
-
   background: #f4f4f4;
-
 }
 
 .values-section,
 .reviews-section {
-
-  background: #0037a6;
-
+  background: var(--blue);
 }
 
 .mission-section,
@@ -351,78 +382,57 @@ nav a:hover,
   padding: 70px 40px;
 
   animation: fadeSlideUp 1s ease;
-
 }
 
 .section-box,
 .timeline-section,
 .reviews-section {
 
-  border-top: 3px solid #ffbf00;
+  border-top: 3px solid var(--gold);
 
   padding-top: 45px;
-
 }
 
 .section-box {
-
   max-width: 950px;
-
   margin: auto;
-
 }
 
 .section-box h2,
 .timeline-section h2,
 .reviews-section h2 {
 
-  color: #ffbf00;
+  color: var(--gold);
 
   font-size: 72px;
-
-  letter-spacing: 2px;
 
   line-height: 0.95;
 
   margin-bottom: 30px;
 
   font-family: 'Playfair Display', serif;
-
 }
 
 .section-box p {
-
   font-size: 21px;
-
   line-height: 2;
-
   color: #222;
-
 }
 
 .values-section p,
 .reviews-section p {
-
   color: white;
-
 }
 
 .timeline-container {
-
   overflow-x: auto;
-
   padding-top: 50px;
-
 }
 
 .timeline-slider {
-
   display: flex;
-
   gap: 35px;
-
   width: max-content;
-
 }
 
 .timeline-card {
@@ -431,7 +441,7 @@ nav a:hover,
 
   background: white;
 
-  border: 2px solid #ffbf00;
+  border: 2px solid var(--gold);
 
   overflow: hidden;
 
@@ -440,7 +450,6 @@ nav a:hover,
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-
 }
 
 .timeline-card:hover,
@@ -449,7 +458,6 @@ nav a:hover,
   transform: translateY(-10px);
 
   box-shadow: 0 18px 40px rgba(0,0,0,0.2);
-
 }
 
 .timeline-card img {
@@ -459,29 +467,23 @@ nav a:hover,
   height: 270px;
 
   object-fit: cover;
-
 }
 
 .timeline-content {
-
   padding: 25px;
-
 }
 
 .timeline-content h3 {
 
-  color: #0037a6;
+  color: var(--blue);
 
   font-size: 30px;
 
   margin-bottom: 12px;
-
 }
 
 .timeline-content p {
-
   line-height: 1.8;
-
 }
 
 .reviews-grid {
@@ -493,14 +495,13 @@ nav a:hover,
   gap: 35px;
 
   margin-top: 50px;
-
 }
 
 .review-card {
 
   background: rgba(255,255,255,0.06);
 
-  border: 2px solid #ffbf00;
+  border: 2px solid var(--gold);
 
   padding: 35px;
 
@@ -509,7 +510,6 @@ nav a:hover,
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-
 }
 
 .review-card p {
@@ -517,15 +517,11 @@ nav a:hover,
   line-height: 1.9;
 
   margin-bottom: 20px;
-
 }
 
 .review-card span {
-
-  color: #ffbf00;
-
+  color: var(--gold);
   font-weight: bold;
-
 }
 
 @keyframes fadeSlideUp {
@@ -535,7 +531,6 @@ nav a:hover,
     opacity: 0;
 
     transform: translateY(30px);
-
   }
 
   to {
@@ -543,23 +538,33 @@ nav a:hover,
     opacity: 1;
 
     transform: translateY(0);
-
   }
-
 }
 
 @media (max-width: 900px) {
 
+  .hero,
+  .about-container {
+
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1,
+  .about-text h2 {
+
+    font-size: 50px;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
   .story-hero {
-
     padding: 120px 25px;
-
   }
 
   .story-hero h1 {
-
     font-size: 58px;
-
   }
 
   .section-box h2,
@@ -567,14 +572,10 @@ nav a:hover,
   .reviews-section h2 {
 
     font-size: 48px;
-
   }
 
   .timeline-card {
-
     min-width: 300px;
-
   }
 
 }
-
