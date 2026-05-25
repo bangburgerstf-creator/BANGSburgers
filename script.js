@@ -2,7 +2,9 @@ const form =
   document.getElementById("contact-form");
 
 const successMessage =
-  document.getElementById("success-message");
+  document.getElementById("success-message") || {
+    innerText: ""
+  };
 
 if(form) {
 
