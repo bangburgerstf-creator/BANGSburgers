@@ -69,3 +69,22 @@ document
     observer.observe(el);
 
   });
+const reviewSlides = document.querySelectorAll(".review-slide");
+
+let currentReview = 0;
+
+setInterval(() => {
+
+  reviewSlides[currentReview].classList.remove("active");
+
+  currentReview++;
+
+  if (currentReview >= reviewSlides.length) {
+
+    currentReview = 0;
+
+  }
+
+  reviewSlides[currentReview].classList.add("active");
+
+}, 4000);
