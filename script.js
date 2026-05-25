@@ -63,7 +63,7 @@ const observer =
   });
 
 document
-  .querySelectorAll(".fade-up, .feature-card, .review-card")
+  .querySelectorAll(".fade-up, .feature-card")
   .forEach((el) => {
 
     observer.observe(el);
