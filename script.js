@@ -26,7 +26,7 @@ if(form) {
         }
       );
 
-      if(response.ok) {
+      if(response.status === 200) {
 
         successMessage.innerText =
           "🍔 Message sent successfully!";
