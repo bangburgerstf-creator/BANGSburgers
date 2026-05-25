@@ -213,20 +213,44 @@
 
   <h2>CONTACT US</h2>
 
-  <form id="contact-form" class="contact-form">
+  <<form
+  id="contact-form"
+  class="contact-form"
+>
 
-    <label>NAME</label>
-    <input type="text" name="name" required>
+  <input
+    type="hidden"
+    name="access_key"
+    value="80425636-e55e-4a01-b4e1-22f901019822"
+  >
 
-    <label>EMAIL</label>
-    <input type="email" name="email" required>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  >
 
-    <label>MESSAGE</label>
-    <textarea name="message" required></textarea>
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  >
 
-    <button type="submit">Send Message</button>
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    required
+  ></textarea>
 
-    <p id="success-message"></p>
+  <button type="submit">
+    Send Message
+  </button>
+
+</form>
+
+<p id="success-message"></p>
 
   </form>
 
