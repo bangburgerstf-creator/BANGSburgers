@@ -29,6 +29,7 @@ body {
   padding: 20px 40px;
 
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .logo {
@@ -50,8 +51,13 @@ body {
 }
 
 nav {
+
   display: flex;
-  gap: 15px;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
 }
 
 nav a,
