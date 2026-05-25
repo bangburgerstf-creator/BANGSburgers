@@ -46,8 +46,16 @@ html {
 }
 
 nav {
+
   display: flex;
-  gap: 15px;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+}
 }
 
 nav a,
@@ -282,7 +290,13 @@ nav a:hover,
   .about-text h2 {
     font-size: 50px;
   }
+nav a {
 
+  padding: 8px 14px;
+
+  font-size: 14px;
+
+}
   .about-features {
     grid-template-columns: 1fr;
   }
