@@ -491,44 +491,71 @@ nav a:hover,
 .timeline-content p {
   line-height: 1.8;
 }
+.review-slider {
 
-.reviews-grid {
+  position: relative;
 
-  display: grid;
+  max-width: 800px;
 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 60px auto;
 
-  gap: 35px;
+  min-height: 220px;
 
-  margin-top: 50px;
 }
 
-.review-card {
+.review-slide {
+
+  position: absolute;
+
+  width: 100%;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
 
   background: rgba(255,255,255,0.06);
 
   border: 2px solid var(--gold);
 
-  padding: 35px;
+  padding: 40px;
 
   backdrop-filter: blur(8px);
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
-.review-card p {
+.review-slide.active {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+.review-slide p {
+
+  color: white;
 
   line-height: 1.9;
 
   margin-bottom: 20px;
+
+  font-size: 20px;
+
 }
 
-.review-card span {
+.review-slide span {
+
   color: var(--gold);
+
   font-weight: bold;
+
 }
+
+
 
 @keyframes fadeSlideUp {
 
