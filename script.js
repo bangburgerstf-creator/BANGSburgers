@@ -4,46 +4,50 @@ const form =
 const successMessage =
   document.getElementById("success-message");
 
-form.addEventListener("submit", async function(e) {
+if(form) {
 
-  e.preventDefault();
+  form.addEventListener("submit", async function(e) {
 
-  const formData = new FormData(form);
+    e.preventDefault();
 
-  formData.append("_captcha", "false");
+    const formData = new FormData(form);
 
-  try {
+    formData.append("_captcha", "false");
 
-    const response = await fetch(
-      "https://formsubmit.co/ajax/bangburgerstf@gmail.com",
-      {
-        method: "POST",
-        body: formData
+    try {
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/bangburgerstf@gmail.com",
+        {
+          method: "POST",
+          body: formData
+        }
+      );
+
+      if(response.ok) {
+
+        successMessage.innerText =
+          "🍔 Message sent successfully!";
+
+        form.reset();
+
+      } else {
+
+        successMessage.innerText =
+          "Something went wrong.";
+
       }
-    );
 
-    if(response.ok) {
-
-      successMessage.innerText =
-        "🍔 Message sent successfully!";
-
-      form.reset();
-
-    } else {
+    } catch(error) {
 
       successMessage.innerText =
-        "Something went wrong.";
+        "Error sending message.";
 
     }
 
-  } catch(error) {
+  });
 
-    successMessage.innerText =
-      "Error sending message.";
-
-  }
-
-});
+}
 
 const observer =
   new IntersectionObserver((entries) => {
@@ -69,25 +73,29 @@ document
     observer.observe(el);
 
   });
+
 window.addEventListener("load", () => {
 
-  const reviewSlides = document.querySelectorAll(".review-slide");
+  const reviewSlides =
+    document.querySelectorAll(".review-slide");
 
   let currentReview = 0;
 
   setInterval(() => {
 
-    reviewSlides[currentReview].classList.remove("active");
+    reviewSlides[currentReview]
+      .classList.remove("active");
 
     currentReview++;
 
-    if (currentReview >= reviewSlides.length) {
+    if(currentReview >= reviewSlides.length) {
 
       currentReview = 0;
 
     }
 
-    reviewSlides[currentReview].classList.add("active");
+    reviewSlides[currentReview]
+      .classList.add("active");
 
   }, 5000);
 
