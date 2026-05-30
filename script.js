@@ -113,3 +113,24 @@ window.addEventListener("load", () => {
   }, 5000);
 
 });
+
+const codeButton =
+  document.getElementById("code-button");
+
+if(codeButton) {
+
+  codeButton.addEventListener("click", () => {
+
+    const code =
+      document.getElementById("secret-code").value;
+
+    if(code === "WESLEY") {
+
+      window.location.href =
+        "wesley.html";
+
+    }
+
+  });
+
+}
