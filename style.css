@@ -656,3 +656,13 @@ nav a:hover,
   color: var(--blue);
 
 }
+
+.code-section h2 {
+
+  font-size: 18px;
+
+  color: var(--blue);
+
+  margin-bottom: 10px;
+
+}
