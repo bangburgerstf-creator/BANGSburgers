@@ -612,3 +612,47 @@ nav a:hover,
   }
 
   }
+
+.code-section {
+
+  padding: 80px 40px;
+
+  text-align: center;
+
+  background: #f4f4f4;
+
+}
+
+.code-section input {
+
+  padding: 15px;
+
+  border: 2px solid var(--blue);
+
+  width: 250px;
+
+  margin-right: 10px;
+
+}
+
+.code-section button {
+
+  padding: 15px 25px;
+
+  border: 2px solid var(--gold);
+
+  background: var(--blue);
+
+  color: var(--gold);
+
+  cursor: pointer;
+
+}
+
+.code-section button:hover {
+
+  background: var(--gold);
+
+  color: var(--blue);
+
+}
