@@ -37,10 +37,13 @@ body {
 }
 
 #wesley-content {
-
-  display: none;
-
+  display: none; /* hidden until video finishes */
+  min-height: 100vh;
+  background-image: url("wesley-background.png");
+  background-size: cover;
+  background-position: center;
 }
+
 
 .wesley-page {
 
