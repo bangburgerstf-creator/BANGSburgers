@@ -39,13 +39,7 @@ document.addEventListener("click", () => {
 
         setTimeout(() => {
 
-          intro.style.display = "none";
-
-          content.style.display = "block";
-
-          document.body.style.overflow = "auto";
-
-        }, 500);
+          window.location.href = "wesley-homepage.html";
 
       }
 
