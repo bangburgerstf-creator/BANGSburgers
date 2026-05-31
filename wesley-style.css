@@ -21,11 +21,9 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100vh;      /* rotated video width */
-  height: 100vw;     /* rotated video height */
+  min-width: 100%;
+  min-height: 100%;
   transform: translate(-50%, -50%) rotate(90deg);
-  object-fit: contain;  /* keeps original aspect ratio, no zoom */
-  background: black;    /* fills the space around with black */
 }
 
 #tap-text {
