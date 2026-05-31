@@ -39,7 +39,10 @@ document.addEventListener("click", () => {
 
         setTimeout(() => {
 
-          window.location.href = "wesley-homepage.html";
+          window.location.href =
+            "wesley-homepage.html";
+
+        }, 500);
 
       }
 
