@@ -129,7 +129,12 @@ if(codeButton) {
       window.location.href =
         "wesley.html";
 
-    }
+    }} else {
+
+  document.getElementById("code-message")
+    .innerText = "Invalid code";
+
+}
 
   });
 
