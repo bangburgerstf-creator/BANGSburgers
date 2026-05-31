@@ -18,11 +18,12 @@ body {
 }
 
 #paper-video {
-
-  width: 80vw;
-
-  transform: rotate(90deg);
-
+  position: fixed;      /* makes it stay in place */
+  top: 0;
+  left: 0;
+  width: 100vw;         /* full viewport width */
+  height: 100vh;        /* full viewport height */
+  object-fit: cover;    /* scale video to fill screen, cropping if needed */
 }
 
 #tap-text {
