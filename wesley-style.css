@@ -1,3 +1,46 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+
+#intro-screen {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: black;
+}
+
+#paper-video {
+
+  width: 80vw;
+
+  transform: rotate(90deg);
+
+}
+
+#tap-text {
+
+  color: white;
+
+  font-family: 'Special Elite', cursive;
+
+  margin-top: 20px;
+
+}
+
+#wesley-content {
+
+  display: none;
+
+}
+
 .wesley-page {
 
   font-family: 'Special Elite', cursive;
