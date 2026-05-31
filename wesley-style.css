@@ -57,3 +57,27 @@ body {
   font-family: 'Permanent Marker', cursive;
 
 }
+
+.wesley-homepage {
+
+  margin: 0;
+
+  background-image: url("wesley-background.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  font-family: 'Special Elite', cursive;
+
+}
+
+.wesley-homepage h1 {
+
+  font-family: 'Permanent Marker', cursive;
+
+}
